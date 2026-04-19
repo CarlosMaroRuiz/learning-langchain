@@ -33,6 +33,11 @@ resultado = cadena.invoke({"tema": "LangChain"})
 *   **Métodos clave de un Runnable:** Todos los objetos core comparten métodos como `.invoke()` (ejecutar una vez), `.stream()` (devolver por fragmentos), y `.batch()` (ejecutar múltiples entradas). También sus versiones asíncronas (`.ainvoke()`, etc.).
 *   **`RunnablePassthrough` y `RunnableParallel`:** Clases útiles para pasar datos sin modificar o ejecutar varias tareas al mismo tiempo dentro de la cadena.
 
+> **CONCEPTO CLAVE: Máquinas vs. Materia Prima**
+> Es crucial entender la diferencia entre un `Runnable` y un `Message` (Mensaje):
+> *   **Los Runnables son las Máquinas:** El Modelo (`llm`), los Parsers y los PromptTemplates. Son objetos activos que procesan datos. Por eso tienen métodos como `.invoke()` o `.stream()`.
+> *   **Los Messages son la Materia Prima:** `SystemMessage`, `HumanMessage` y `AIMessage` **NO** son Runnables. Son simples cajas de datos que viajan a través de la tubería (`|`). No puedes "ejecutar" un mensaje, solo se lo pasas a un Runnable para que lo procese.
+
 ## 6. Documentos (Documents)
 Cuando trabajas con RAG (Retrieval-Augmented Generation) para leer PDFs o webs, el texto no flota libremente, sino que se encapsula en la clase `Document`.
 *   Un `Document` tiene dos atributos principales: `page_content` (el texto en sí) y `metadata` (un diccionario con información como el autor, la página, la URL, etc.).

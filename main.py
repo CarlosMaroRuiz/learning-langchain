@@ -1,9 +1,9 @@
-from chat_practice import execute_app
+from chat_ollama import execute_ollama_app
 from dotenv import load_dotenv
 
 load_dotenv()
 def main():
-    execute_app()
+    execute_ollama_app()
 
 
 if __name__ == "__main__":
