@@ -1,6 +1,9 @@
-from practices import execute_async,execute
+from chat_practice import execute_app
+from dotenv import load_dotenv
+
+load_dotenv()
 def main():
-    execute_async()
+    execute_app()
 
 
 if __name__ == "__main__":
