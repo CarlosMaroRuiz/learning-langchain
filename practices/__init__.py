@@ -1,1 +1,1 @@
-from .deepseek_1 import execute as deepseek_1
+from .deepseek_1 import execute,execute_async

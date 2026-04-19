@@ -22,6 +22,7 @@ En lugar de codificar textos largos (hardcoding), usamos plantillas dinámicas. 
 Los LLMs siempre devuelven texto (strings). Si necesitas que tu programa en Python trabaje con listas, diccionarios o objetos específicos, necesitas un analizador.
 *   Permiten convertir la respuesta de texto plano del modelo en datos estructurados (como JSON).
 *   **Structured Output (Salida Estructurada):** La forma más moderna, combinando **Pydantic** para forzar al LLM a devolver siempre la estructura de datos requerida.
+*   **Custom Parsers (`BaseTransformOutputParser`):** LangChain permite crear tus propios limpiadores/transformadores de texto heredando de esta clase. Al conectarlo al modelo (`modelo | mi_parser`), intercepta el objeto complejo `AIMessage`, extrae el texto puro (`.content`), le aplica tu lógica personalizada (ej. limpiar Markdown) y te devuelve un `str` listo para usar, soportando *streaming* de forma automática.
 
 ## 5. LCEL (LangChain Expression Language) y Runnables
 LCEL es una sintaxis especial que usa el símbolo `|` (pipe) para encadenar componentes de forma intuitiva. Todo en LCEL se basa en la interfaz **`Runnable`**.

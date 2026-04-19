@@ -1,6 +1,6 @@
-from practices import deepseek_1
+from practices import execute_async,execute
 def main():
-    deepseek_1()
+    execute_async()
 
 
 if __name__ == "__main__":
