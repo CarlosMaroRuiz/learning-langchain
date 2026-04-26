@@ -12,3 +12,4 @@ wheels/
 .env
 .vscode/
 uv.lock
+kokoro_config/

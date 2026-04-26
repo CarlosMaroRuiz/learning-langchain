@@ -1,9 +1,9 @@
-from chat_ollama import execute_ollama_app
+from ollama_mcp.app import execute_app
 from dotenv import load_dotenv
 
 load_dotenv()
 def main():
-    execute_ollama_app()
+    execute_app()
 
 
 if __name__ == "__main__":

@@ -3,8 +3,7 @@ import sys
 import time
 import pyfiglet
 from colorama import Fore, Style, init
-
-# Inicializar colorama (buena práctica para que los colores funcionen bien en Windows)
+P
 init()
 
 
