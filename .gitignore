@@ -13,3 +13,4 @@ wheels/
 .vscode/
 uv.lock
 kokoro_config/
+.continue
